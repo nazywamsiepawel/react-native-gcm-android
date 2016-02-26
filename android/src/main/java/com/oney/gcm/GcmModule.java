@@ -212,7 +212,7 @@ public class GcmModule extends ReactContextBaseJavaModule implements LifecycleEv
         Intent intent = new Intent(getReactApplicationContext(), intentClass);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(getReactApplicationContext(), 0, intent,
-                PendingIntent.FLAG_ONE_SHOT);
+                PendingIntent.FLAG_CANCEL_CURRENT);
 
         Bitmap largeIcon = BitmapFactory.decodeResource(resources, largeIconResourceId);
 
